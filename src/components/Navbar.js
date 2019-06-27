@@ -10,7 +10,7 @@ const Navbar = props => {
       <div className="uk-navbar-left">
         <ul className="uk-navbar-nav">
           <li>
-            <Link to="/home">
+            <Link to="/">
               <p className="uk-button uk-button-text">Home</p>
             </Link>
           </li>

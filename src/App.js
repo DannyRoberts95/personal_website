@@ -22,7 +22,7 @@ class App extends React.Component {
           <div>
             <Navbar />
             <div>
-              <Route exact path="/home" component={LandingPage} />
+              <Route exact path="/" component={LandingPage} />
               <Route path="/about" component={AboutPage} />
               <Route path="/gallery" component={GalleryPage} />
               <Route path="/contact" component={ContactPage} />
