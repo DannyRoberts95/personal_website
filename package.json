@@ -2,7 +2,7 @@
   "name": "my-react-app2",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://DannyRoberts95.github.io/javawax/",
+  "homepage": "https://DannyRoberts95.github.io/personal_website/landing_page",
   "dependencies": {
     "axios": "^0.18.0",
     "gh-pages": "^2.0.1",

@@ -9,7 +9,11 @@ class ContactPage extends React.Component {
   render() {
     return (
       <div>
-        <h1> This is the Contact Page</h1>
+        <div className="uk-width-1-1 uk-row-first uk-margin-large-bottom">
+          <p className=" uk-heading-small uk-heading-line">
+            <span>Contact page under construction.</span>
+          </p>
+        </div>
       </div>
     );
   }

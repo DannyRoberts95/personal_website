@@ -58,8 +58,8 @@ class Filter extends React.Component {
         </p>
         <div className="uk-margin-medium-bottom">{fieldButtons}</div>
 
-        <p className="uk-h4 uk-text-capitalize uk-margin-large-bottom">
-          {filtertext}
+        <p className=" uk-h4 uk-heading-line uk-margin-medium-bottom">
+          <span>{filtertext}</span>
         </p>
 
         <div />
