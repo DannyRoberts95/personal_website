@@ -1,4 +1,7 @@
 import React from "react";
+import Heading from "./Heading.js";
+import Subheading from "./Subheading.js";
+import Subheading2 from "./Subheading2.js";
 
 class Filter extends React.Component {
   constructor(props) {
@@ -10,7 +13,7 @@ class Filter extends React.Component {
       return (
         <button
           key={item}
-          className="uk-button uk-button-default uk-button-medium uk-margin-small-right uk-margin-small-bottom"
+          className="uk-button uk-button-default uk-button-small uk-margin-small-right uk-margin-small-bottom"
           onClick={this.props.handleChange}
           value={item}
           name="fieldSortPreference"
@@ -24,7 +27,7 @@ class Filter extends React.Component {
       return (
         <button
           key={item}
-          className="uk-button uk-button-default uk-button-medium uk-margin-small-right "
+          className="uk-button uk-button-default uk-button-small uk-margin-small-right uk-margin-small-bottom"
           onClick={this.props.handleChange}
           value={item}
           name="yearSortPreference"
@@ -43,26 +46,20 @@ class Filter extends React.Component {
         : `${this.props.yearSortPreference}`);
 
     return (
-      <div>
-        <p className="uk-h2 uk-text-secondary uk-margin-medium-bottom">
-          <span>Filter Projects</span>
-        </p>
+      <div className="uk-width-1-4 uk-margin-medium-bottom">
+        <div className="uk-width-1-1 uk-margin-medium-bottom">
+          <Subheading content="Year" />
+          <div className="">{yearButtons}</div>
+        </div>
 
-        <p className=" uk-h3 uk-heading-line">
-          <span>Year</span>
-        </p>
-        <div className="uk-margin-medium-bottom">{yearButtons}</div>
+        <div className=" uk-width-1-1  uk-margin-medium-bottom">
+          <Subheading content="Creative Fields" />
+          <div className="">{fieldButtons}</div>
+        </div>
 
-        <p className=" uk-h4 uk-heading-line">
-          <span>Creative Field</span>
-        </p>
-        <div className="uk-margin-medium-bottom">{fieldButtons}</div>
-
-        <p className=" uk-h4 uk-heading-line uk-margin-medium-bottom">
-          <span>{filtertext}</span>
-        </p>
-
-        <div />
+        <div className="uk-width-1-1">
+          <Subheading2 content={filtertext} />
+        </div>
       </div>
     );
   }

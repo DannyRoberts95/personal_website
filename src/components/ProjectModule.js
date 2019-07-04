@@ -12,7 +12,7 @@ class ProjectModule extends React.Component {
     const thumbnail = project.covers[808];
 
     return (
-      <div className="uk-text-center uk-width-1-1@s uk-width-1-2@m uk-width-1-4@l">
+      <div className="uk-text-center uk-width-1-1@s uk-width-1-2@m uk-width-1-3@l">
         <Link to={`/project_page/${project.id}`}>
           <div className="uk-inline-clip uk-transition-toggle" tabIndex="0">
             <img className="uk-border-rounded" src={thumbnail} alt="" />

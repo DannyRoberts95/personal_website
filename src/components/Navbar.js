@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 const Navbar = props => {
   return (
     <nav
-      className="uk-navbar-container uk-margin uk-navbar-transparent uk-margin-large-bottom"
+      className="uk-navbar-container uk-margin uk-margin-large-bottom uk-background-default uk-navbar-transparent"
       uk-navbar="mode: click"
     >
-      <div className="uk-navbar-left">
+      <div className="uk-navbar-left ">
         <ul className="uk-navbar-nav">
           <li>
             <Link to="/">
@@ -17,7 +17,7 @@ const Navbar = props => {
         </ul>
       </div>
 
-      <div className="uk-navbar-right">
+      <div className="uk-navbar-right ">
         <ul className="uk-navbar-nav">
           <li>
             <Link to="/gallery">
@@ -26,14 +26,8 @@ const Navbar = props => {
           </li>
 
           <li>
-            <Link to="/contact">
-              <p className="uk-button uk-button-text">Contact</p>
-            </Link>
-          </li>
-
-          <li>
-            <Link to="/about">
-              <p className="uk-button uk-button-text">About</p>
+            <Link to="/info">
+              <p className="uk-button uk-button-text">Information</p>
             </Link>
           </li>
         </ul>

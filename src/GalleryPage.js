@@ -96,31 +96,32 @@ class GalleryPage extends React.Component {
 
     return (
       <div>
-        <div className="uk-width-1-1 uk-row-first uk-margin-large-bottom">
-          <p className=" uk-heading-small uk-heading-line">
-            <span>Portfolio Gallery</span>
-          </p>
-        </div>
-
-        <Filter
-          handleChange={this.handleChange}
-          fieldSortPreference={this.state.fieldSortPreference}
-          fieldValues={this.state.fieldValues}
-          yearSortPreference={this.state.yearSortPreference}
-          yearValues={this.state.yearValues}
-        />
-
-        <div>
-          {this.state.projectsLoaded ? (
-            <div className="uk-grid-medium " uk-grid="masonry: true;">
+        {this.state.projectsLoaded ? (
+          <div
+            className="uk-grid-small "
+            uk-grid="true"
+            uk-scrollspy="cls: uk-animation-fade; target: img; delay: 250; repeat: false"
+          >
+            <Filter
+              handleChange={this.handleChange}
+              fieldSortPreference={this.state.fieldSortPreference}
+              fieldValues={this.state.fieldValues}
+              yearSortPreference={this.state.yearSortPreference}
+              yearValues={this.state.yearValues}
+            />
+            <div
+              className="uk-width-3-4"
+              uk-grid=" true"
+              uk-scrollspy="cls: uk-animation-fade; target: img; delay: 250; repeat: false"
+            >
               {renderList}
             </div>
-          ) : (
-            <div className="uk-grid-small " uk-grid="true">
-              <span className="uk-align-center" uk-spinner="ratio: 7.5" />
-            </div>
-          )}
-        </div>
+          </div>
+        ) : (
+          <div className="uk-width-1-1 uk-position-center" uk-grid="true">
+            <span className="uk-align-center" uk-spinner="ratio: 7.5" />
+          </div>
+        )}
       </div>
     );
   }
