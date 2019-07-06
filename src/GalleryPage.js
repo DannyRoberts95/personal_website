@@ -6,6 +6,10 @@ import axios from "axios";
 import Filter from "./components/Filter.js";
 import ProjectModule from "./components/ProjectModule.js";
 
+import Heading from "./components/Heading.js";
+import Subheading from "./components/Subheading.js";
+import Subheading2 from "./components/Subheading2.js";
+
 class GalleryPage extends React.Component {
   constructor(props) {
     super(props);
@@ -97,24 +101,26 @@ class GalleryPage extends React.Component {
     return (
       <div>
         {this.state.projectsLoaded ? (
-          <div
-            className="uk-grid-small "
-            uk-grid="true"
-            uk-scrollspy="cls: uk-animation-fade; target: img; delay: 250; repeat: false"
-          >
-            <Filter
-              handleChange={this.handleChange}
-              fieldSortPreference={this.state.fieldSortPreference}
-              fieldValues={this.state.fieldValues}
-              yearSortPreference={this.state.yearSortPreference}
-              yearValues={this.state.yearValues}
-            />
-            <div
-              className="uk-width-3-4"
-              uk-grid=" true"
-              uk-scrollspy="cls: uk-animation-fade; target: img; delay: 250; repeat: false"
-            >
-              {renderList}
+          <div uk-scrollspy="cls: uk-animation-fade; target: div; delay: 100; repeat: false">
+            <div>
+              <Heading content="Gallery" />
+            </div>
+
+            <div className="uk-grid-medium" uk-grid="masonry: true">
+              <Filter
+                handleChange={this.handleChange}
+                fieldSortPreference={this.state.fieldSortPreference}
+                fieldValues={this.state.fieldValues}
+                yearSortPreference={this.state.yearSortPreference}
+                yearValues={this.state.yearValues}
+              />
+
+              <div
+                className="uk-width-3-4@l uk-width-3-4@m uk-width-1-1@s uk-grid-small"
+                uk-grid="masonry: true"
+              >
+                {renderList}
+              </div>
             </div>
           </div>
         ) : (

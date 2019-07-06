@@ -13,12 +13,11 @@ import InfoPage from "./Info.js";
 import ProjectPage from "./components/ProjectPage.js";
 
 import Navbar from "./components/Navbar.js";
-// import Navbar from "./components/Navbar2.js";
 
 class App extends React.Component {
   render() {
     return (
-      <div className="uk-container uk-container-small uk-container-center uk-margin-top uk-margin-large-bottom">
+      <div className="uk-container uk-container-medium uk-container-center uk-margin-top uk-margin-large-bottom">
         <HashRouter>
           <div>
             <Navbar />

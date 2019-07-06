@@ -1,12 +1,13 @@
 import React, { Component } from "react";
-// import ReactDOM from "react-dom";
-// import { Player } from "video-react";
-// import "../css/video-react.css";
 import axios from "axios";
 
 import ImageModule from "./ImageModule.js";
 import VideoModule from "./VideoModule.js";
 import TextModule from "./TextModule.js";
+
+import Heading from "./Heading.js";
+import Subheading from "./Subheading.js";
+import Subheading2 from "./Subheading2.js";
 
 class ProjectPage extends Component {
   constructor(props) {
@@ -76,11 +77,9 @@ const ProjectInfo = props => {
   tools = tools.join(` | `);
   return (
     <div className="">
-      <article className="uk-article uk-width-1-1@s uk-width-2-3@m uk-row-first uk-align-center uk-margin-large-bottom">
+      <article className="uk-article uk-width-1-1@s uk-width-1-1@m uk-row-first uk-align-center uk-margin-large-bottom">
         <div className="uk-width-1-1 uk-row-first uk-margin-large-bottom">
-          <p className=" uk-heading-small uk-heading-line">
-            <span>{props.project.name}</span>
-          </p>
+          <Heading content={props.project.name} />
         </div>
 
         <p className="uk-h2 uk-text-secondary uk-margin-medium-bottom">
@@ -88,7 +87,7 @@ const ProjectInfo = props => {
         </p>
         <p className="uk-text-justify">{props.project.description}</p>
 
-        <p className="uk-article-meta uk-text-capitalize  uk-text-small uk-width-2-3@s">
+        <p className="uk-article-meta uk-text-capitalize  uk-text-small ">
           <b>Creative Fields:</b> {fields}
           <br />
           <b>Project Tags:</b> {tags}

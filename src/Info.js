@@ -11,47 +11,66 @@ class ContactPage extends React.Component {
 
   render() {
     return (
-      <div className="uk-grid-large " uk-grid="true">
-        <div className="uk-width-1-4">
+      <div
+        className="uk-grid-large "
+        uk-grid="true"
+        uk-scrollspy="target: > div; cls: uk-animation-fade; delay: 100"
+      >
+        <div className="uk-width-1-1">
+          <Heading content="Information" />
+        </div>
+        <div className="uk-width-1-3@m uk-width-1-2@s">
           <div className="">
-            <Subheading content="E-mail" />
+            <Subheading content="Contact" />
+            <Subheading2 content="E-mail" />
             <p>For and questions or enquires feel free to reach out.</p>
             <p>
               <b>danielrdhr@gmail.com</b>
             </p>
 
-            <Subheading content="Social" />
+            <Subheading2 content="Social" />
             <p>Why not follow me on social media?</p>
-            <ul class="uk-list  uk-list-bullet">
+            <ul className="uk-list  uk-list-bullet">
               <li>
-                <a class="uk-link-muted" href="#">
+                <a
+                  className="uk-link-muted"
+                  href="https://www.instagram.com/javawax/"
+                >
                   Instagram
                 </a>
               </li>
               <li>
-                <a class="uk-link-muted" href="#">
+                <a className="uk-link-muted" href="#">
                   Facebook
                 </a>
               </li>
             </ul>
           </div>
         </div>
-        <div className="uk-width-3-4">
-          <div className="">
-            <Heading content="About Me" />
-            <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was
-              popularised in the 1960s with the release of Letraset sheets
-              containing Lorem Ipsum passages, and more recently with desktop
-              publishing software like Aldus PageMaker including versions of
-              Lorem Ipsum.
-            </p>
-          </div>
+
+        <div className="uk-width-2-3@m uk-width-1-1@s">
+          <Subheading content="About me" />
+          <Subheading2 content="Who am I?" />
+          <p className="uk-text-justify uk-column-1-1@s uk-column-1-2@m">
+            Hi, my name is Dan. I am from Dublin, Ireland. I like black coffee,
+            good books, beautiful things, comfy chairs, big ideas and odd
+            places.
+          </p>
+          <Subheading2 content="What do I do?" />
+          <p className="uk-text-justify uk-column-1-1@s uk-column-1-2@m">
+            I am a designer and artist who enjoys working at the intersection of
+            art and technology. I hold a first class honors degree in Creative
+            Computing from the Dunlaoghire Institute of Art, Design and
+            Technology.
+            <br />
+            My work explores the areas of creative programming, generative
+            design, interactive graphics, data visualisation, human/ computer
+            interaction, UI design and web desgn. I take pride in the diversity
+            of my work which ranges from traditonal ink illustration, to this
+            website, to interactive digital sceneography. I believe artistic
+            variety is key to avoiding creative stagnation and so I create
+            things using as many mediums as I can.
+          </p>
         </div>
       </div>
     );

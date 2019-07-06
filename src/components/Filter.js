@@ -46,19 +46,16 @@ class Filter extends React.Component {
         : `${this.props.yearSortPreference}`);
 
     return (
-      <div className="uk-width-1-4 uk-margin-medium-bottom">
-        <div className="uk-width-1-1 uk-margin-medium-bottom">
-          <Subheading content="Year" />
+      <div className="uk-width-1-4@l uk-width-1-4@m uk-width-1-1@s ">
+        <Subheading content="Filter Projects" />
+
+        <div className="uk-margin-medium-bottom">
+          <Subheading2 content="Year" />
           <div className="">{yearButtons}</div>
         </div>
-
-        <div className=" uk-width-1-1  uk-margin-medium-bottom">
-          <Subheading content="Creative Fields" />
+        <div className="uk-margin-medium-bottom">
+          <Subheading2 content="Creative Fields" />
           <div className="">{fieldButtons}</div>
-        </div>
-
-        <div className="uk-width-1-1">
-          <Subheading2 content={filtertext} />
         </div>
       </div>
     );
