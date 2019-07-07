@@ -5,10 +5,6 @@ import Subheading from "./components/Subheading.js";
 import Subheading2 from "./components/Subheading2.js";
 
 class ContactPage extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-
   render() {
     return (
       <div
@@ -39,11 +35,6 @@ class ContactPage extends React.Component {
                   Instagram
                 </a>
               </li>
-              <li>
-                <a className="uk-link-muted" href="#">
-                  Facebook
-                </a>
-              </li>
             </ul>
           </div>
         </div>
@@ -55,21 +46,20 @@ class ContactPage extends React.Component {
             Hi, my name is Dan. I am from Dublin, Ireland. I like black coffee,
             good books, beautiful things, comfy chairs, big ideas and odd
             places.
+            <br />I am a designer and artist who enjoys working at the
+            intersection of art and technology. I hold a first class honors
+            degree in Creative Computing from the Dunlaoghire Institute of Art,
+            Design and Technology.
           </p>
           <Subheading2 content="What do I do?" />
           <p className="uk-text-justify uk-column-1-1@s uk-column-1-2@m">
-            I am a designer and artist who enjoys working at the intersection of
-            art and technology. I hold a first class honors degree in Creative
-            Computing from the Dunlaoghire Institute of Art, Design and
-            Technology.
-            <br />
             My work explores the areas of creative programming, generative
             design, interactive graphics, data visualisation, human/ computer
             interaction, UI design and web desgn. I take pride in the diversity
             of my work which ranges from traditonal ink illustration, to this
             website, to interactive digital sceneography. I believe artistic
             variety is key to avoiding creative stagnation and so I create
-            things using as many mediums as I can.
+            things using as many mediums as I can as often a I'm able.
           </p>
         </div>
       </div>

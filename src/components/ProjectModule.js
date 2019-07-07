@@ -1,8 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Heading from "./Heading.js";
-import Subheading from "./Subheading.js";
-import Subheading2 from "./Subheading2.js";
 
 class ProjectModule extends React.Component {
   constructor(props) {

@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
-console.log(logo);
 
 const Navbar = props => {
   return (
@@ -27,17 +26,16 @@ const Navbar = props => {
       </div>
 
       <div className="uk-navbar-center ">
+        <ul className="uk-navbar-nav" />
+      </div>
+
+      <div className="uk-navbar-right ">
         <ul className="uk-navbar-nav">
           <li>
             <Link to="/gallery">
               <p className="uk-button uk-button-text">Gallery</p>
             </Link>
           </li>
-        </ul>
-      </div>
-
-      <div className="uk-navbar-right ">
-        <ul className="uk-navbar-nav">
           <li>
             <Link to="/info">
               <p className="uk-button uk-button-text">Info</p>

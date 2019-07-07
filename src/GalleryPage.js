@@ -7,8 +7,6 @@ import Filter from "./components/Filter.js";
 import ProjectModule from "./components/ProjectModule.js";
 
 import Heading from "./components/Heading.js";
-import Subheading from "./components/Subheading.js";
-import Subheading2 from "./components/Subheading2.js";
 
 class GalleryPage extends React.Component {
   constructor(props) {
@@ -101,7 +99,7 @@ class GalleryPage extends React.Component {
     return (
       <div>
         {this.state.projectsLoaded ? (
-          <div uk-scrollspy="cls: uk-animation-fade; target: div; delay: 100; repeat: false">
+          <div uk-scrollspy="cls: uk-animation-fade; target: div; delay: 75; repeat: false">
             <div>
               <Heading content="Gallery" />
             </div>

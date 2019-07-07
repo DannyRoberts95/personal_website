@@ -1,4 +1,6 @@
 import React from "react";
+import p5 from "p5";
+import p5Dom from "p5/lib/addons/p5.dom.js";
 import { HashRouter, Route } from "react-router-dom";
 
 import "../node_modules/uikit/dist/css/uikit.css";
@@ -13,11 +15,12 @@ import InfoPage from "./Info.js";
 import ProjectPage from "./components/ProjectPage.js";
 
 import Navbar from "./components/Navbar.js";
+import Footer from "./components/Footer.js";
 
 class App extends React.Component {
   render() {
     return (
-      <div className="uk-container uk-container-medium uk-container-center uk-margin-top uk-margin-large-bottom">
+      <div className="uk-container uk-container-medium uk-container-center uk-margin-top u">
         <HashRouter>
           <div>
             <Navbar />

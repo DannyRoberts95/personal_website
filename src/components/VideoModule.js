@@ -7,10 +7,9 @@ class VideoModule extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <div
-        className="uk-width-1-1@s uk-width-2-3@m uk-row-first uk-text-small uk-align-center uk-dark"
+        className="uk-width-1-1@s uk-width-2-3@m  uk-margin-large-bottom"
         width="1920"
         height="1080"
       >

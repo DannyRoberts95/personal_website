@@ -39,9 +39,9 @@ class ProjectPage extends Component {
 
   render() {
     console.log(this.state);
-    let ImageModulesToRender;
+    let ModulesToRender;
     if (this.state.projectLoaded) {
-      ImageModulesToRender = this.state.project.modules.map((item, i) => {
+      ModulesToRender = this.state.project.modules.map((item, i) => {
         if (item.type === "image") {
           return <ImageModule key={i} module={item} />;
         } else if (item.type === "video") {
@@ -52,9 +52,9 @@ class ProjectPage extends Component {
       });
     }
     return this.state.projectLoaded ? (
-      <div className="uk-grid-small" uk-grid="true">
+      <div className="uk-grid-large" uk-grid="true">
         <ProjectInfo project={this.state.project} />
-        <div>{ImageModulesToRender}</div>
+        <div>{ModulesToRender}</div>
       </div>
     ) : (
       <div className="uk-grid-small " uk-grid="true">
@@ -77,34 +77,32 @@ const ProjectInfo = props => {
   tools = tools.join(` | `);
   return (
     <div className="">
-      <article className="uk-article uk-width-1-1@s uk-width-1-1@m uk-row-first uk-align-center uk-margin-large-bottom">
-        <div className="uk-width-1-1 uk-row-first uk-margin-large-bottom">
-          <Heading content={props.project.name} />
-        </div>
+      <div className="uk-width-1-1 uk-row-first uk-margin-large-bottom">
+        <Heading content={props.project.name} />
+        <Subheading content="Project Info" />
+      </div>
 
-        <p className="uk-h2 uk-text-secondary uk-margin-medium-bottom">
-          <i>Project Info</i>
+      {props.project.description.length > 500 ? (
+        <p className="uk-text-justify uk-column-1-1@s uk-column-1-2@m">
+          {props.project.description}
         </p>
-        <p className="uk-text-justify">{props.project.description}</p>
+      ) : (
+        <p className="uk-text-justify uk-width-1-2">
+          {props.project.description}
+        </p>
+      )}
 
-        <p className="uk-article-meta uk-text-capitalize  uk-text-small ">
-          <b>Creative Fields:</b> {fields}
-          <br />
-          <b>Project Tags:</b> {tags}
-          <br />
-          <b>Mediums Used:</b> {tools}
-          <br />
-          <b>Date Posted:</b> {created}
-        </p>
-      </article>
+      <p className="uk-width-1-1@s uk-width-1-3@m uk-article-meta uk-text-capitalize uk-text-small ">
+        <b>Creative Fields:</b> {fields}
+        <br />
+        <b>Project Tags:</b> {tags}
+        <br />
+        <b>Mediums Used:</b> {tools}
+        <br />
+        <b>Date Posted:</b> {created}
+      </p>
     </div>
   );
 };
-
-//DUMB MODULE TO RENDER MODULES BASED ON PROJECT MODULE TYPE FROM API CALL
-
-// const TextModule = props => {};
-// const AudioModule = props => {};
-// const EmbeddedMediaModule = props => {};
 
 export default ProjectPage;

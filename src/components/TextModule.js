@@ -6,10 +6,9 @@ class TextModule extends React.Component {
     this.state = { module: props.module };
   }
   render() {
-    console.log(this.state.module);
     return (
-      <div className="uk-width-1-1@s uk-width-2-3@m uk-row-first uk-margin-large-medium uk-align-center">
-        <div>{this.state.module.text_plain}</div>
+      <div className="uk-width-1-1@s uk-width-2-3@m  uk-margin-large-bottom ">
+        {this.state.module.text_plain}
       </div>
     );
   }
