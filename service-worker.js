@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "danielroberts.ie/precache-manifest.b880f66212d8ed37a4f4cb5cdbe082e7.js"
+  "danielroberts.ie/personal_website/precache-manifest.1a87669eb7bbf844b753b780aaf4d324.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("danielroberts.ie/index.html", {
+workbox.routing.registerNavigationRoute("danielroberts.ie/personal_website/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
