@@ -20,7 +20,7 @@ import Footer from "./components/Footer.js";
 class App extends React.Component {
   render() {
     return (
-      <div className="uk-container uk-container-medium uk-container-center uk-margin-top u">
+      <div className="uk-container uk-container-medium uk-container-center uk-margin-large-bottom">
         <HashRouter>
           <div>
             <Navbar />
